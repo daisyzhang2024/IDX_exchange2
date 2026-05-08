@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load your data
-df = pd.read_csv("cleaned_data_sold_Wk45.csv")  # or .xlsx, etc.
+df = pd.read_csv("Wk45_cleaned_data_sold.csv")  # or .xlsx, etc.
 
 # ── Date Consistency Checks ───────────────────────────────────────────────────
 

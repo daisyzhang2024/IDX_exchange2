@@ -2,9 +2,10 @@ import pandas as pd
 import numpy as np
 
 # Load your data
-df = pd.read_csv("null_CRMLSListing_202401_to_202603.csv")  # or .xlsx, etc.
+df = pd.read_csv("null_CRMLSSold_202401_to_202604.csv")  # or .xlsx, etc.
 print("Original Shape:", df.shape)
 # Original Shape: (591733, 71) (Sold)
+# Original Shape: (852963, 71) (Listing)
 
 # ── 1. Convert date fields to datetime ──────────────────────────────────────
 date_cols = ['CloseDate', 'PurchaseContractDate', 'ListingContractDate', 'ContractStatusChangeDate']
@@ -62,6 +63,10 @@ df = df[df['MainLevelBedrooms'] >= 0]
 df = df[df['BathroomsTotalInteger'] >= 0]
 
 # ── Save cleaned data ─────────────────────────────────────────────────────────
-df.to_csv('cleaned_data_listing_Wk45.csv', index=False)
+df.to_csv('cleaned_data_sold_Wk45.csv', index=False)
 print("Done! Shape:", df.shape)
 # Done! Shape: (591154, 76) (Sold)
+# Done! Shape: (852072, 76) (Listing)
+
+# Done! Shape: (615391, 76) (Sold with April data)
+# Done! Shape: (891057, 76) (Listing with April data)

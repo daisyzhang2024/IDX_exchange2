@@ -46,4 +46,4 @@ bad_geo = df[df['geo_issue_flag'] == True]
 print(bad_geo[['Latitude', 'Longitude', 'missing_coords_flag', 
                'zero_coords_flag', 'positive_longitude_flag', 'out_of_state_flag']])
 
-df.to_csv('Wk45_sold_geoflags.csv')
+df.to_csv('Wk45_sold_geoflags_final.csv')
